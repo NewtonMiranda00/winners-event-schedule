@@ -1,0 +1,1 @@
+export { default as LogoWinners } from './logo-winners.png'
