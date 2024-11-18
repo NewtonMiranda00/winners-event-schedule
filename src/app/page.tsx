@@ -114,7 +114,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold mb-6 text-center">Programação do Evento</h1>
           <h2 className="text-xl font-semibold mb-4 text-center">Dezembro 2024</h2>
 
-          <div className="flex justify-center space-x-2 mb-6">
+          <div className="flex max-sm:flex-col-reverse justify-center items-center gap-2 mb-6">
             <button
               onClick={() => setSelectedDay(null)}
               className={`px-4 py-2 rounded-full ${
@@ -125,19 +125,22 @@ export default function Home() {
             >
               Todos
             </button>
-            {days.map((day) => (
-              <button
-                key={day}
-                onClick={() => toggleDay(day)}
-                className={`px-4 py-2 rounded-full ${
-                  selectedDay === day
-                    ? 'bg-white text-black'
-                    : 'bg-gray-800 text-white'
-                }`}
-              >
-                {day}
-              </button>
-            ))}
+            <div className="flex justify-center space-x-2">
+              {days.map((day) => (
+                <button
+                  key={day}
+                  onClick={() => toggleDay(day)}
+                  className={`px-4 py-2 rounded-full ${
+                    selectedDay === day
+                      ? 'bg-white text-black'
+                      : 'bg-gray-800 text-white'
+                  }`}
+                >
+                  {day}
+                </button>
+              ))}
+            </div>
+            
           </div>
 
           <div className="space-y-8">
