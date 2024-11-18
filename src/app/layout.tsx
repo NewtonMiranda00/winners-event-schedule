@@ -16,7 +16,11 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Winners Event",
-  description: "",
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
